@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - WE//DONE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="https://welldone.axiomthemes.com/wp-content/uploads/2024/04/logo-1.png" alt="WE//DONE Logo">
+        </div>
+        <ul class="navbar-links">
+            <li><a href="../index.html">Home</a></li>
+             <li><a href="our-services.html" class="active">Pages</a></li>
+            <li><a href="about.html">Blog</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+        <div class="navbar-right">
+            <div class="navbar-search">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </div>
+            <div class="navbar-contact">
+                <span>+1 800 555 25 69</span>
+            </div>
+            <div class="navbar-button">
+                <a href="#" style="color: white; text-decoration: none;">GET IN TOUCH</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h1>FAQS</h1>
+        <p>Home / FAQS</p>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section" style="max-width:400px; margin:80px auto 80px auto; padding:8px 0;">
+      <div class="faq-item" style="border-bottom:1px solid #222; padding:32px 0 16px 0;">
+        <div class="faq-question" style="display:flex; align-items:center; justify-content:space-between; cursor:pointer;">
+          <span style="font-family:'Poppins',sans-serif; font-size:1.5rem; font-weight:500;">DO YOU HAVE A DISCOUNT?</span>
+          <span class="faq-toggle" style="font-size:2rem; color:#ea3b05; font-weight:400;">&minus;</span>
+        </div>
+        <div class="faq-answer" style="margin-top:18px; color:#888; font-size:1.1rem; display:block;">
+          Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur. Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.
+        </div>
+      </div>
+      <div class="faq-item" style="border-bottom:1px solid #ddd; padding:32px 0 16px 0;">
+        <div class="faq-question" style="display:flex; align-items:center; justify-content:space-between; cursor:pointer;">
+          <span style="font-family:'Poppins',sans-serif; font-size:1.5rem; font-weight:500;">WHAT'S THE WARRANTY?</span>
+          <span class="faq-toggle" style="font-size:2rem; color:#222; font-weight:400;">+</span>
+        </div>
+        <div class="faq-answer" style="margin-top:18px; color:#888; font-size:1.1rem; display:none;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, vitae porta erat urna a velit.
+        </div>
+      </div>
+      <div class="faq-item" style="border-bottom:1px solid #ddd; padding:32px 0 16px 0;">
+        <div class="faq-question" style="display:flex; align-items:center; justify-content:space-between; cursor:pointer;">
+          <span style="font-family:'Poppins',sans-serif; font-size:1.5rem; font-weight:500;">HOW LONG DOES SHIPPING TAKE?</span>
+          <span class="faq-toggle" style="font-size:2rem; color:#222; font-weight:400;">+</span>
+        </div>
+        <div class="faq-answer" style="margin-top:18px; color:#888; font-size:1.1rem; display:none;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames.
+        </div>
+      </div>
+      <div class="faq-item" style="border-bottom:1px solid #ddd; padding:32px 0 16px 0;">
+        <div class="faq-question" style="display:flex; align-items:center; justify-content:space-between; cursor:pointer;">
+          <span style="font-family:'Poppins',sans-serif; font-size:1.5rem; font-weight:500;">HOW CAN I RETURN MY ORDER?</span>
+          <span class="faq-toggle" style="font-size:2rem; color:#222; font-weight:400;">+</span>
+        </div>
+        <div class="faq-answer" style="margin-top:18px; color:#888; font-size:1.1rem; display:none;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Mauris euismod, sapien nec cursus cursus, enim urna.
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.querySelectorAll('.faq-question').forEach(function(q) {
+        q.addEventListener('click', function() {
+          var item = this.parentElement;
+          var answer = item.querySelector('.faq-answer');
+          var toggle = item.querySelector('.faq-toggle');
+          var isOpen = answer.style.display === 'block';
+          // Close all
+          document.querySelectorAll('.faq-answer').forEach(function(a) { a.style.display = 'none'; });
+          document.querySelectorAll('.faq-toggle').forEach(function(t) { t.textContent = '+'; t.style.color = '#222'; });
+          // Open if was closed
+          if (!isOpen) {
+            answer.style.display = 'block';
+            toggle.textContent = '−';
+            toggle.style.color = '#ea3b05';
+          }
+        });
+      });
+    </script>
+
+    <!-- Hero Section with Animated Text -->
+    <section class="hero-section" style="position:relative; min-height:800px; background:url('data:image/jpeg;base64,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') center/cover no-repeat; display:flex; align-items:center; justify-content:center;">
+  <div style="background:rgba(0,0,0,0.35); width:100%; height:100%; position:absolute; left:0; top:0;"></div>
+  <div style="position:relative; z-index:2; text-align:center; color:#fff;">
+    <div style="font-size:1.5rem; font-weight:600; letter-spacing:1px; margin-bottom:28px;">STYLE & PERFORMANCE</div>
+    <div style="font-size:3.5rem; font-weight:700; line-height:1.1;">
+      ACTIVEWEAR DESIGNED<br> FOR UNLIMITED <span id="animated-word" style="display:inline-block; min-width:140px;">STYLE</span><span id="cursor" style="display:inline-block; font-weight:700;">|</span>
+    </div>
+  </div>
+</section>
+<script>
+  (function() {
+    var words = ["STYLE", "COMFORT"];
+    var i = 0;
+    var el = document.getElementById('animated-word');
+    var cursor = document.getElementById('cursor');
+    setInterval(function() {
+      i = (i + 1) % words.length;
+      el.textContent = words[i];
+    }, 2000);
+    setInterval(function() {
+      if(cursor.style.visibility === 'hidden') {
+        cursor.style.visibility = 'visible';
+      } else {
+        cursor.style.visibility = 'hidden';
+      }
+    }, 500);
+  })();
+</script>
+
+<!-- Floating Buttons -->
+    <div class="floating-buttons floating-buttons-right">
+        <div class="button-group">
+            <a href="https://welldone.axiomthemes.com/our-services/" class="icon-button" data-hover-text="BUY THEME">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 1 1-8 0"></path>
+                </svg>
+            </a>
+            <a href="#" class="icon-button" data-hover-text="OUR BESTSELLERS">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                </svg>
+            </a>
+            <a href="#" class="icon-button" data-hover-text="HIDE PANELS">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+<!-- New Section: Footer -->
+<footer class="footer-section">
+  <div class="footer-container">
+    <div class="footer-column footer-logo-column">
+      <img src="https://welldone.axiomthemes.com/wp-content/uploads/2024/04/logo-1.png" alt="WE//DONE Logo" class="footer-logo">
+    </div>
+    <div class="footer-column contact-office">
+      <h3>OFFICE</h3>
+      <p>Germany &mdash;</p>
+      <p>785 15h Street, Office 478<br>Berlin, De 81566</p>
+      <p class="footer-email"><a href="mailto:info@email.com">info@email.com</a></p>
+      <p class="footer-phone">+1 800 555 25 69</p>
+    </div>
+    <div class="footer-column footer-links">
+      <h3>LINKS</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+    </div>
+    <div class="footer-column get-in-touch">
+      <h3>GET IN TOUCH</h3>
+      <div class="footer-social-icons-new">
+        <a href="#" class="footer-social-icon-new"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="footer-social-icon-new"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="footer-social-icon-new"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>AxiomThemes &copy; 2025. All rights reserved.</p>
+  </div>
+</footer>
+<script src="../js/benefits.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.articles-carousel').owlCarousel({
+      loop: true,
+      margin: 30,
+      nav: false,
+      dots: true,
+      items: 4,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        576: {
+          items: 2
+        },
+        992: {
+          items: 3
+        },
+        1200: {
+          items: 4
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html> 
